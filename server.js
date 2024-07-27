@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
-const connectDBforLogin = require('./server/database/connection1');
+const connectDB = require('./server/database/connection');
 const app = express();
 
 dotenv.config({ path: 'config.env' });
@@ -13,7 +13,7 @@ const port = process.env.PORT || 8080;
 app.use(morgan('tiny'));
 
 // mongo db connection
-connectDBforLogin();
+connectDB();
 
 // parse request to body parser
 // fetch the content from frontend

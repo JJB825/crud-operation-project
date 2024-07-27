@@ -1,14 +1,6 @@
 // importing axios for requests
 const axios = require('axios');
 
-exports.loginRoute = (req, res) => {
-  res.render('login');
-};
-
-exports.signUpRoute = (req, res) => {
-  res.render('signup');
-};
-
 exports.homeRoute = (req, res) => {
   // make a get request to /api/users
   axios
