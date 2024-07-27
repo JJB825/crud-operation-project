@@ -15,7 +15,7 @@ $('#update_user').submit(function (event) {
   });
 
   const request = {
-    url: `http://localhost:3000/api/users/${updated_data.id}`,
+    url: `https://crud-0peration-project.onrender.com/api/users/${updated_data.id}`,
     method: 'PUT',
     data: updated_data,
   };
@@ -31,7 +31,7 @@ if (window.location.pathname == '/') {
     const id = $(this).attr('user_id');
 
     const request = {
-      url: `http://localhost:3000/api/users/${id}`,
+      url: `https://crud-0peration-project.onrender.com/api/users/${id}`,
       method: 'DELETE',
     };
 
